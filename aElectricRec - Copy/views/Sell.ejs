@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Phone Form</title>
+</head>
+<body>
+  <h1>Mobile Phone Form</h1>
+  <form action="/process" method="POST" onsubmit="setCheckboxValue()">
+    <label for="screen_size">Screen Size:</label>
+    <input type="text" name="screen_size" id="screen_size" required><br><br>
+    
+    <label for="fog" >4G:</label>
+    <input type="checkbox" name="fog" id="fog" value="1" ><br><br>
+    <input type="hidden" name="fog1"id="fog1" value="0">
+
+    <label for="fig">5G:</label>
+    <input type="checkbox" name="fig" id="fig" value="1" ><br><br>
+    <input type="hidden" name="fig1" id="fig1"value="0">
+    
+    <label for="rear_camera_mp">Rear Camera (MP):</label>
+    <input type="text" name="rear_camera_mp" id="rear_camera_mp" required><br><br>
+    
+    <label for="front_camera_mp">Front Camera (MP):</label>
+    <input type="text" name="front_camera_mp" id="front_camera_mp" required><br><br>
+    
+    <label for="internal_memory">Internal Memory:</label>
+    <input type="text" name="internal_memory" id="internal_memory" required><br><br>
+    
+    <label for="ram">RAM:</label>
+    <input type="text" name="ram" id="ram" required><br><br>
+    
+    <label for="battery">Battery:</label>
+    <input type="text" name="battery" id="battery" required><br><br>
+    
+    <label for="weight">Weight:</label>
+    <input type="text" name="weight" id="weight" required><br><br>
+    
+    <label for="release_year">Release Year:</label>
+    <input type="text" name="release_year" id="release_year" required><br><br>
+    
+    <label for="days_used">Days Used:</label>
+    <input type="text" name="days_used" id="days_used" required><br><br>
+    
+    <label for="normalized_new_price">Normalized New Price:</label>
+    <input type="text" name="normalized_new_price" id="normalized_new_price" required><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function setCheckboxValue() {
+      var checkbox = document.getElementById("fog");
+      var checkboxH = document.getElementById("fog1");
+      var checkbox1 = document.getElementById("fig");
+      var checkbox1H = document.getElementById("fig1");
+      if (checkbox.checked) {
+        // Uncheck the hidden input if the checkbox is checked
+        checkboxH.disabled = true;
+      }
+      if (checkbox1.checked) {
+        // Uncheck the hidden input if the checkbox is checked
+        checkbox1H.disabled=true;
+      }
+    }
+  </script>
+  
+</body>
+</html>
