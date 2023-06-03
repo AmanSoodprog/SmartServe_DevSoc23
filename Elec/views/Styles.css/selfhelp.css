@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #0F1320;
+}
+
+body {
+  color: white;
+}
+
+h1 {
+  line-height: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+h3 {
+  line-height: 2em;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar Section */
+.main-nav {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-img {
+  width: 220px;
+}
+
+.nav-links {
+  flex-basis: 730px;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+/* Query Section */
+.query-section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.query-right {
+  margin-top: 100px;
+}
+
+.query-left img {
+  width: 350px;
+}
+
+.searchbox {
+  position: relative;
+}
+
+.sinput {
+  width: 20rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.an {
+  visibility: hidden;
+}
+
+.foot P {
+  background-color: #54659C;
+  display: flex;
+  justify-content: center;
+}
+
+.foot-heading {
+  padding-top: 6px;
+}
