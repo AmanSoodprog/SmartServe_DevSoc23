@@ -1,0 +1,217 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Phone Form</title>
+</head>
+<body>
+  <h1>Mobile Phone Form</h1>
+  <form action="/process" method="POST" >
+    <label for="screen_size">Screen Size:</label>
+    <input type="text" name="screen_size" id="screen_size" required><br><br>
+    
+    <label for="fog" >4G:</label>
+    <input type="checkbox" name="fog" id="fog" value="1" ><br><br>
+    <input type="hidden" name="fog1"id="fog1" value="0">
+
+    <label for="fig">5G:</label>
+    <input type="checkbox" name="fig" id="fig" value="1" ><br><br>
+    <input type="hidden" name="fig1" id="fig1"value="0">
+    
+    <label for="rear_camera_mp">Rear Camera (MP):</label>
+    <input type="text" name="rear_camera_mp" id="rear_camera_mp" required><br><br>
+    
+    <label for="front_camera_mp">Front Camera (MP):</label>
+    <input type="text" name="front_camera_mp" id="front_camera_mp" required><br><br>
+    
+    <label for="internal_memory">Internal Memory:</label>
+    <input type="text" name="internal_memory" id="internal_memory" required><br><br>
+    
+    <label for="ram">RAM:</label>
+    <input type="text" name="ram" id="ram" required><br><br>
+    
+    <label for="battery">Battery:</label>
+    <input type="text" name="battery" id="battery" required><br><br>
+    
+    <label for="weight">Weight:</label>
+    <input type="text" name="weight" id="weight" required><br><br>
+    
+    <label for="release_year">Release Year:</label>
+    <input type="text" name="release_year" id="release_year" required><br><br>
+    
+    <label for="days_used">Days Used:</label>
+    <input type="text" name="days_used" id="days_used" required><br><br>
+    
+    <label for="normalized_new_price">Normalized New Price:</label>
+    <input type="text" name="normalized_new_price" id="normalized_new_price" required><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function setCheckboxValue() {
+      var checkbox = document.getElementById("fog");
+      var checkboxH = document.getElementById("fog1");
+      var checkbox1 = document.getElementById("fig");
+      var checkbox1H = document.getElementById("fig1");
+      if (checkbox.checked) {
+        // Uncheck the hidden input if the checkbox is checked
+        checkboxH.disabled = true;
+      }
+      if (checkbox1.checked) {
+        // Uncheck the hidden input if the checkbox is checked
+        checkbox1H.disabled=true;
+      }
+    }
+  </script>
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Predict</title>
+  <script src="https://kit.fontawesome.com/6ad7fda697.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Styles.css/sell.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="main-nav container">
+      <a href="/">
+        <img src="./Assets/sslogo.png" alt="" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <ul class="link-items">
+          <li><a href="/">Home </a></li>
+          <li><a href="SelfHelp">Self-help</a></li>
+          <li><a href="Locate">Store Locator</a></li>
+          <li><a href="PushDB">Query Submission</a></li>
+          <li><a href="Sell">Request A Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  </nav>
+  <!-- query card -->
+  <section class="container2">
+    <form action="/process" method="POST" onsubmit="setCheckboxValue()">
+      <header>Enter your device specifications for a quote to be predicted:    
+      </header>
+      <br>
+      <div class="form first">
+        <div class="fields">
+          <div class="input-field">
+            <label>Screen Size</label>
+            <input type="text" name="screen_size" id="screen_size" placeholder="Enter your Screen Size" required>
+          </div>
+          <div class="set-1">
+            <section title=".squaredThree">
+              <div class="squaredThree">
+                <input type="checkbox" name="fog" id="fog" value="1">
+                <input type="hidden" name="fog1"id="fog1" value="0">
+                <label for="squaredThree" class="txt">4G</label>
+              </div>
+            </section>
+            <section title=".squaredThree">
+              <div class="squaredThree">
+                <input type="checkbox"name="fig" id="fig" value="1" />
+                <input type="hidden" name="fig1" id="fig1"value="0">
+                <label for="squaredThree" class="txt">5G</label>
+              </div>
+            </section>
+          </div>
+          <br>
+          <!-- <br> -->
+          <div class="set-1">
+            <div class="input-field">
+              <label>Rear Camera (M.P)</label>
+              <input type="text" name="rear_camera_mp" id="rear_camera_mp" placeholder="Enter your Rear Camera" required>
+            </div>
+
+            <div class="input-field">
+              <label>Front Camera (M.P)</label>
+              <input type="text" name="front_camera_mp" id="front_camera_mp" placeholder="Enter your Front Camera" required>
+            </div>
+
+          </div>
+          <div class="set-1">
+            <div class="input-field">
+              <label>Storage</label>
+              <input type="text" name="internal_memory" id="internal_memory" placeholder="Enter your Storage Details" required>
+            </div>
+
+            <div class="input-field">
+              <label>RAM</label>
+              <input type="text" type="text"  name="ram" id="ram" placeholder="Enter your RAM Details" required>
+            </div>
+
+          </div>
+          <div class="input-field">
+            <label>Battery</label>
+            <input type="text" name="battery" id="battery" placeholder="Enter your Battery Details" required>
+          </div>
+          <div class="input-field">
+            <label>Weight</label>
+            <input type="text" name="weight" id="weight"placeholder="Enter Weight (gm)" required>
+          </div>
+          <div class="set-1">
+            <div class="input-field">
+              <label>Release Year</label>
+              <input type="text" name="release_year" id="release_year" placeholder="Enter Release Year" required>
+            </div>
+
+            <div class="input-field">
+              <label>Days Used</label>
+              <input type="text"  name="days_used" id="days_used" placeholder="Enter Days Used" required>
+            </div>
+          </div>
+          <div class="input-field">
+            <label>Purchase Price</label>
+            <input type="text" name="normalized_new_price" id="normalized_new_price" placeholder="Enter Purchase Price" required>
+          </div>
+          <button class="sumbit">
+            <span class="btnText">Submit</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+    </form>
+  </section>
+  <br>
+  <br>
+  <br>
+  <!-- footer -->
+  <footer>
+    <div class="foot">
+      <p class="foot-heading">© 2023, SmartServe Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+  function setCheckboxValue() {
+    var checkbox = document.getElementById("fog");
+    var checkboxH = document.getElementById("fog1");
+    var checkbox1 = document.getElementById("fig");
+    var checkbox1H = document.getElementById("fig1");
+    if (checkbox.checked) {
+      // Uncheck the hidden input if the checkbox is checked
+      checkboxH.disabled = true;
+    }
+    if (checkbox1.checked) {
+      // Uncheck the hidden input if the checkbox is checked
+      checkbox1H.disabled=true;
+    }
+  }
+</script>
+</html>

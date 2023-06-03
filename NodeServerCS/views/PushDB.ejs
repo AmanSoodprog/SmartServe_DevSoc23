@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Phone Form</title>
+</head>
+<body>
+  <h1>Mobile Phone Form</h1>
+  <form action="/pushDB" method="POST" onsubmit="setCheckboxValue()">
+    <label for="Name">Name: </label>
+    <input type="text" name="Name" id="Name" required><br><br>
+    
+    <label for="email">Email: </label>
+    <input type="text" name="email" id="email" required><br><br>
+    
+    <label for="prob">Query: </label>
+    <input type="text" name="prob" id="prob" required><br><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Submission</title>
+    <script src="https://kit.fontawesome.com/6ad7fda697.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./Styles.css/home.css"> -->
+  
+    <link rel="stylesheet" href="./Styles.css/query.css">
+</head>
+<body>
+  <!-- Navbar -->
+    <nav>
+        <div class="main-nav container">
+          <a href="/" >
+            <img src="./Assets/sslogo.png" alt="" class="logo-img">
+          </a>
+          <div class="nav-links">
+            <ul class="link-items">
+              <li><a href="/">Home </a></li>
+              <li><a href="SelfHelp">Self-help</a></li>
+              <li><a href="Locate">Store Locator</a></li>
+              <li><a href="PushDB">Query Submission</a></li>
+              <li><a href="Sell">Request A Quote</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+    </nav>
+    <!-- query card -->
+    <section class="container2">
+        <form action="/pushDB" method="POST">
+            <header>Enter the Query Below For Registration into Company's Portal
+            </header>
+            <br>
+            <div class="form first">
+                <div class="fields">
+                  <div class="input-field">
+                    <label>Full Name</label>
+                    <input type="text" name="Name" id="Name" placeholder="Enter your name" required>
+                  </div>
+
+                  <div class="input-field">
+                    <label>Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                  </div>
+
+                  <div class="input-field">
+                    <label>Query</label>
+                    <input type="text" name="prob" id="prob" placeholder="Enter your query" required>
+                  </div>
+
+                  <button class="sumbit">
+                    <span class="btnText">Submit</span>
+                    <i class="uil uil-navigator"></i>
+                  </button>
+          </form>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- footer -->
+ 
+</body>
+</html>
