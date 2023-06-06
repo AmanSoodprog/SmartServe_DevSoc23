@@ -1,2 +1,0 @@
-
-    MongoP(received_array)
