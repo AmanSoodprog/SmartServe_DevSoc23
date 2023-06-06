@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  
+  <p><%= answer%></p>
+
+
+  <% if (results.length > 0) { %>
+    <% results.forEach(result => { %>
+      <h2><%= result.snippet.title %></h2>
+      <%link="https://www.youtube.com/watch?v="+result.id.videoId%>
+      <a href=<%=link %>>
+        <img src="<%= result.snippet.thumbnails.default.url %>" alt="Thumbnail">
+      </a>
+   
+    <% }); %>
+  <% } else { %>
+    <p>No results found.</p>
+  <% } %>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/6ad7fda697.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles.css/selfout.css">
+</head>
+<body>
+  <!-- navbar -->
+    <nav>
+        <div class="main-nav container">
+          <a href="/" >
+            <img src="./Assets/sslogo.png" alt="" class="logo-img">
+          </a>
+          <div class="nav-links">
+            <ul class="link-items">
+              <li><a href="/">Home </a></li>
+              <li><a href="SelfHelp">Self-help</a></li>
+              <li><a href="Locate">Store Locator</a></li>
+              <li><a href="PushDB">Query Submission</a></li>
+              <li><a href="Sell">Request A Quote</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+    </nav>
+    <!-- results section -->
+      <section>
+        <div class="container results">
+            <div class="txt-results">
+              <div class="f1">
+                <img src="./Assets/openai.png" alt="" width="100px">
+                <h1>AI Response</h1>
+              </div>
+                    <p><%= answer%></p>
+            </div>
+            <br>
+            <div class="txt-results">
+              <div class="f1">
+                <img src="./Assets/gear.png" alt="" width="100px">
+                <h1>AI Response(Beta)</h1>
+              <br>
+              </div>
+                    <p><%= answer1%></p>
+            </div>
+            <div class="video-results">
+              <div class="head-sec">
+                <img src="./Assets/youtube.png" class="yimg" alt="" width="70px">
+                <h1>Video Results</h1>
+              </div>
+              <br>
+              <br>
+              <% if (results.length > 0) { %>
+                <% results.forEach(result => { %>
+                  <%link="https://www.youtube.com/watch?v="+result.id.videoId%>
+              <div class="cards">
+                <h2 class="video-head"><%= result.snippet.title %></h2>
+                <br>
+                <a class="videot" href=<%=link %>>
+                  <img src="<%= result.snippet.thumbnails.default.url %>" alt="Thumbnail">
+                </a>
+                <br>
+                <br>
+              </div>
+                            <% }); %>
+                <% } else { %>
+                  <p>No results found.</p>
+                <% } %>
+            </div>
+        </div>
+      </section>
+      <!-- footer -->
+        
+</body>
+</html>
